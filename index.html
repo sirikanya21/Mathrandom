@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathgame</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&family=K2D&family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="row box frame">
+        <div class="col-12 mt-4 namegame">
+            <h1>เกมคณิตศาสตร์</h1>
+        </div>
+    
+        <div class="row">
+            <div class="col-4 mt-2">
+                <button type="button" class="btn btn-secondary startw" onclick="Startgame();">เริ่มเกม</button>
+            </div>
+            <div class="col-8 mt-2 scoreboard">
+                <label>คะแนน : <span id="score"></span>/<span id="all"></span></label>
+        </div>
+
+        <div class="col-12">
+            <div class="row bodyproposition mt-5">
+                <div class="col-sm-9 ">
+                        <div class="row position2 line" >
+                            <div class="col-2 mt-3">
+                                <label><span id="num1"></span></label>
+                            </div>
+                            <div class="col-2 mt-3">
+                                <label><span id="mark"></span></label>
+                            </div>
+                            <div class="col-2 mt-3">
+                                <label><span id="num2"></span></label>
+                            </div>
+                            <div class="col-1 mt-3">
+                                <label>=</label>
+                            </div>
+                            <div class="col-4 mt-2">
+                                <input type="text" class="writeanswer" id="answer" placeholder="ใส่คำตอบ" />
+                            </div>
+                        </div>
+
+                        <div class="row selected mt-3">
+                            <div class="col-3 text">
+                                <label>ตัวเลือก</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="radio" class="btn-check" name="choice" id="plus" value="+" onclick="radiomark('+');" />
+                                <label class="btn btn-secondary" for="plus">+</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="radio" class="btn-check" name="choice" id="minus" value="-" onclick="radiomark('-');" />
+                                <label class="btn btn-secondary" for="minus">-</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="radio" class="btn-check" name="choice" id="multiplied" value="*" onclick="radiomark('×');" />
+                                <label class="btn btn-secondary" for="multiplied">×</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="radio" class="btn-check" name="choice" id="divide" value="/" onclick="radiomark('÷');" />
+                                <label class="btn btn-secondary" for="divide">÷</label>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-12 mt-5 bodyproposition">
+                    <button type="button" class="btn btn-success textboxanswer" onclick="btnanswer();">ส่งคำตอบ</button>
+                </div>
+
+                <div class="col-sm-9 mt-3 text">
+                        <legend>ผลลัพธ์</legend>
+                        <label style="font-size: 50px;"><span id="result"></span></label>
+                </div>
+            </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html> 
